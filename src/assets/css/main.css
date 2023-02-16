@@ -1,0 +1,89 @@
+:root {
+  --primary-color: rgba(29, 50, 81, 1);
+  --secondary-color: #395B64;
+  --third-color: #A5C9CA;
+  --forth-color: #E7F6F2;
+
+  --white: #FFFFFF;
+  --black: #2C3333;
+} 
+
+
+@media (prefers-color-scheme: dark) {
+:root {
+  --primary-color: #1D3251;
+  --secondary-color: #395B64;
+  --third-color: #A5C9CA;
+  --forth-color: #E7F6F2;
+
+  --white: #FFFFFF;
+  --black: #2C3333;
+}
+}
+
+@media (prefers-color-scheme: light) {
+:root {
+  --primary-color: #1D3251;
+  --secondary-color: #395B64;
+  --third-color: #A5C9CA;
+  --forth-color: #E7F6F2;
+
+  --white: #FFFFFF;
+  --black: #2C3333;
+}
+}
+
+
+
+
+:root {
+    /*1rem = 10px*/
+    font-size: 62.5%; 
+}
+  
+@font-face {
+  font-family: "Epilogue";
+  src: url("../fonts/Epilogue-regular.ttf");
+  font-weight: 125 950;
+  font-style: normal;
+  font-stretch: 75% 125%;
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Epilogue";
+  src: url("../fonts/Epilogue-italic.ttf");
+  font-weight: 125 950;
+  font-style: italic;
+  font-stretch: 75% 125%;
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "CrimsonPro";
+  src: url("../fonts/CrimsonPro-regular.ttf");
+  font-weight: 125 950;
+  font-style: normal;
+  font-stretch: 75% 125%;
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Epilogue";
+  src: url("../fonts/CrimsonPro-italic.ttf");
+  font-weight: 125 950;
+  font-style: italic;
+  font-stretch: 75% 125%;
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald.ttf");
+  font-weight: 125 950;
+  font-style: normal;
+  font-stretch: 75% 125%;
+  font-display: swap;
+} 
+  
+  
