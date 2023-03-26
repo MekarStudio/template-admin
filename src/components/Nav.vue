@@ -68,7 +68,7 @@ import { LaExternalLinkAltSolid } from "@kalimahapps/vue-icons/la";
 import { PrWindowMinimize } from "@kalimahapps/vue-icons/pr";
 import { PrWindowMaximize } from "@kalimahapps/vue-icons/pr";
 import { TaForms } from "@kalimahapps/vue-icons/ta";
-import { auth } from "../firebase";
+// import { auth } from "../firebase";
 import { useRoute, useRouter } from 'vue-router';
 import { ref } from '@vue/reactivity';
 import { useStore } from 'vuex';
@@ -93,16 +93,16 @@ let dropdowns = [ref<dropDown>({height: '50px'})];
 let state = computed(() => store.state.menuState)
 
 let signOut = () => {
-    loading.value = true;
-    auth.signOut().then(() => {
-        loading.value = false;
-        error.value = false;
-        router.push('/login');
-    }).catch(() => {
-        loading.value = false;
-        error.value = true;
-        alert('Error logging out, please try again later. If the problem continues, please contact your webmaster najid_mekarstudio@mypenggerak.org')
-    })
+    // loading.value = true;
+    // auth.signOut().then(() => {
+    //     loading.value = false;
+    //     error.value = false;
+    //     router.push('/login');
+    // }).catch(() => {
+    //     loading.value = false;
+    //     error.value = true;
+    //     alert('Error logging out, please try again later. If the problem continues, please contact your webmaster najid_mekarstudio@mypenggerak.org')
+    // })
 }
 
 let toggleMenu = () => {

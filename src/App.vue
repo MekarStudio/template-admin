@@ -1,5 +1,4 @@
 <script>
-import { ref } from '@vue/reactivity';
 import NavVue from './components/Nav.vue';
 import { useRoute } from 'vue-router';
 import { computed, watch } from '@vue/runtime-core';
@@ -17,12 +16,12 @@ export default {
     let store = useStore();
     let state = computed(() => store.state.menuState);
 
-    watch(() => route.fullPath, (newPath, oldPath) => {
+    watch(() => route.fullPath, (newPath) => {
       if (newPath === '/login' || newPath.startsWith('/article-editor')) {
         store.commit('setMenuState', 'hide');
       } else {
         if (store.state.menuState === 'hide') {
-          store.commit('setMenuState', 'maximize');
+          store.commit('setMenuState', 'max');
         }
         
       }

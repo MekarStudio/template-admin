@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { auth } from '../firebase';
+// import { auth } from '../firebase';
 import { onAuthStateChanged } from "firebase/auth";
 import HomeView from '../views/HomeView.vue'
 
@@ -40,6 +40,17 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/Drive.vue'),
+      meta: {
+        authRequired: true,
+      }
+    },
+    {
+      path: '/article-editor',
+      name: 'article-editor',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/ArticleEditor.vue'),
       meta: {
         authRequired: true,
       }
