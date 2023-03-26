@@ -48,17 +48,19 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.matched.some((record) => record.meta.authRequired)) {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        next()
-      } else {
-        router.push("/login");
-      }
-    })
-  } else {
-    next()
-  }
+  // if (to.matched.some((record) => record.meta.authRequired)) {
+  //   onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       next()
+  //     } else {
+  //       router.push("/login");
+  //     }
+  //   })
+  // } else {
+  //   next()
+  // }
+
+  next()
 });
 
 export default router

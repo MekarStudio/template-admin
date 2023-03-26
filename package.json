@@ -1,5 +1,5 @@
 {
-  "name": "Admin-template",
+  "name": "admintemplate",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -11,9 +11,15 @@
   "dependencies": {
     "@kalimahapps/vue-icons": "^1.1.6",
     "@unocss/preset-uno": "^0.49.4",
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/vue-splide": "^0.6.12",
     "firebase": "^9.17.1",
     "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "@vueup/vue-quill": "^1.0.0",
+    "vue-quill-editor": "^3.0.6",
+    "vuedraggable": "^4.1.0",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",

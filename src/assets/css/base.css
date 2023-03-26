@@ -9,8 +9,9 @@ body {
     background-color: var(--black);
     margin: 0;
     width: 100%;
+    height: 100svh;
+    height: 100vh;
     font-family: 'Epilogue';
-    min-height: 100vh;
     perspective: 1px;
     perspective-origin: 0 0;
 }

@@ -2,7 +2,8 @@
 import { ref } from '@vue/reactivity';
 import NavVue from './components/Nav.vue';
 import { useRoute } from 'vue-router';
-import { watch } from '@vue/runtime-core';
+import { computed, watch } from '@vue/runtime-core';
+import { useStore } from 'vuex';
 
 
 export default {
@@ -11,36 +12,57 @@ export default {
   },
   setup() {
     let route = useRoute();
+    let store = useStore();
+    let state = computed(() => store.state.menuState);
+
     watch(() => route.fullPath, (newPath, oldPath) => {
-      if (newPath === '/login') {
-        removeNav.value = true;
+      if (newPath === '/login' || newPath.startsWith('/article-editor')) {
+        store.commit('setMenuState', 'hide');
       } else {
-        removeNav.value = false;
+        if (store.state.menuState === 'hide') {
+          store.commit('setMenuState', 'maximize');
+        }
+        
       }
     })
 
-    let removeNav = ref(false);
-
-    return { removeNav }
+    return { store, state }
   }
 }
 </script>
 
 <template>
-  <div class="h-100vh w-100% min-h-600px" :class="{wrapper: !removeNav, wrapperLogin: removeNav}">
-    <NavVue v-if="!removeNav"/>
+  <div class="main-content w-100% min-h-600px relative" :class="{hidden: state === 'hide', minimize: state === 'min', maximize: state === 'max'}">
+    <NavVue v-if="this.$store.state.menuState !== 'hide'" class="relative z-99"/>
     <RouterView />
   </div>
 </template>
 
 <style scoped>
-.wrapper {
+
+.main-content {
+  transition: all 0.3s ease;
+  height: 100vh;
+  height: 100svh;
+}
+.maximize {
   display: grid;
   grid-template-columns: 300px auto;
 }
 
-.wrapperLogin {
+.hidden {
   display: grid;
   grid-template-columns: auto;
+}
+
+.minimize {
+  display: grid;
+  grid-template-columns: 1px auto;
+}
+
+@media only screen and (min-width: 500px) {
+.minimize {
+  grid-template-columns: 80px auto;
+}
 }
 </style>
