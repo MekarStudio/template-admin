@@ -1,5 +1,5 @@
 <template>
-    <header id="header" class="flex flex-col justify-between items-center" :class="{min: state === 'min', max: state === 'max'}">
+    <header id="header" class="flex flex-col justify-between items-center z-90" :class="{min: state === 'min', max: state === 'max'}">
         <div class="min-btn absolute top-0 left-0 h-30px w-30px cursor-pointer flex justify-center items-center z-99" @click="toggleMenu">
             <PrWindowMinimize class="white text-23px " v-show="state === 'max'"/>
             <PrWindowMaximize class="white text-23px" v-show="state === 'min'"/>

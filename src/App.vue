@@ -4,11 +4,13 @@ import NavVue from './components/Nav.vue';
 import { useRoute } from 'vue-router';
 import { computed, watch } from '@vue/runtime-core';
 import { useStore } from 'vuex';
+import notificationVue from './components/atom/notification.vue';
 
 
 export default {
   components: {
-    NavVue
+    NavVue,
+    notificationVue
   },
   setup() {
     let route = useRoute();
@@ -33,12 +35,18 @@ export default {
 
 <template>
   <div class="main-content w-100% min-h-600px relative" :class="{hidden: state === 'hide', minimize: state === 'min', maximize: state === 'max'}">
-    <NavVue v-if="this.$store.state.menuState !== 'hide'" class="relative z-99"/>
-    <RouterView />
+    <NavVue v-if="this.$store.state.menuState !== 'hide'" class="relative z-90"/>
+    <RouterView class="main"/>
+    <notificationVue  />
   </div>
 </template>
 
 <style scoped>
+
+.main {
+  height: 100vh;
+  height: 100svh;
+}
 
 .main-content {
   transition: all 0.3s ease;
