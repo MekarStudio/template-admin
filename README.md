@@ -1,6 +1,18 @@
-# penggerak-admin
+# Admin Template
 
-This template should help get you started developing with Vue 3 in Vite.
+Admin Dashboard template made by Mekar Studio
+
+## Features
+
+- Photos Drag&Drop API
+- Typescript!
+- Editor view 
+- Notifications component
+- Popup Modal component
+- UnoCSS | Basically tailwind on steroids
+- Text Editor component
+- Route Guard using Firebase Auth
+- Vuex 
 
 ## Recommended IDE Setup
 
@@ -13,6 +25,7 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 ## Project Setup
 
 ```sh
+git clone https://github.com/MekarStudio/template-admin
 npm install
 ```
 
@@ -32,4 +45,10 @@ npm run build
 
 ```sh
 npm run lint
+```
+
+### Preview Production Ready
+
+```sh
+npm run preview
 ```

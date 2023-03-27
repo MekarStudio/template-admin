@@ -6,13 +6,7 @@
 // import { getAuth } from "firebase/auth";
 
 // const firebaseConfig = {
-//     apiKey: "AIzaSyASTOXFGbpt3pzgboM1Tc8WNjrH9vmVDsM",
-//     authDomain: "prototype-d9733.firebaseapp.com",
-//     projectId: "prototype-d9733",
-//     storageBucket: "prototype-d9733.appspot.com",
-//     messagingSenderId: "320025173060",
-//     appId: "1:320025173060:web:2855d9a29677581b283011",
-//     measurementId: "G-WFHTBP6P90"
+
 // };
 
 // const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();

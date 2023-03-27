@@ -12,8 +12,6 @@
 </template>
 
 <script setup lang="ts">
-import { Ref } from "vue"
-
 
 let props = defineProps<{
     show: boolean,
